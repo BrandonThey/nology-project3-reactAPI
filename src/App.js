@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import SideNavBar from './containers/SideNavBar/SideNavBar';
 import BeerCard from './componets/BeerCard/BeerCard';
 import { useState, useEffect } from 'react';
@@ -20,14 +20,18 @@ function App() {
 
   useEffect(getBeers, []);
 
-  useEffect(() => {
-    console.log(beers)
-  },[beers])
-
   return (
     <div className="App">
-      <BeerCard beersArr={beers}/>
-      <SideNavBar />
+      <header>Header</header>
+      <main>
+        <section className='side-nav'>
+          <SideNavBar />
+        </section>
+
+        <section className='beer-cards'>
+          {beers && <BeerCard beersArr={beers}/>}
+        </section>
+      </main>
     </div>
   );
 }

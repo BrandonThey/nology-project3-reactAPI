@@ -1,0 +1,14 @@
+main{ 
+    display: flex;
+}
+
+.side-nav {
+    width: 20%;
+    background-color: blueviolet;
+}
+
+.beer-cards {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -4,7 +4,7 @@ const BeerCard = (props) => {
 
     const mappedBeers = beersArr.map((beer) => {
         return(
-            <div key={beer.id}>
+            <div key={beer.id} className='card'>
                 <h2>{beer.name}</h2>
                 <img src={beer.image_url} alt={beer.name} />
                 <p>{beer.tagline}</p>
