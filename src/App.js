@@ -1,7 +1,8 @@
 import './App.css';
 import SideNavBar from './containers/SideNavBar/SideNavBar';
-
+import BeerCard from './componets/BeerCard/BeerCard';
 import { useState, useEffect } from 'react';
+
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <BeerCard beersArr={beers}/>
       <SideNavBar />
     </div>
   );
