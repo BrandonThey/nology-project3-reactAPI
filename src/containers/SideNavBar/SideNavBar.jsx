@@ -1,4 +1,5 @@
-import Button from "../../components/Button/Button";
+import Button from "../../componets/Button/Button";
+import SearchBox from "../../componets/SearchBox/SearchBox";
 import "./SideNavBar.scss"
 const SideNavBar = () => {
 
