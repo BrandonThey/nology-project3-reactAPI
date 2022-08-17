@@ -1,6 +1,5 @@
 import Button from "../../componets/Button/Button";
 import SearchBox from "../../componets/SearchBox/SearchBox";
-import BeerCard from "../../componets/BeerCard/BeerCard";
 import "./SideNavBar.scss"
 
 const SideNavBar = (props) => {

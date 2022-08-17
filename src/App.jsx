@@ -23,6 +23,7 @@ function App() {
       });
   }
 
+  console.log(beers);
   useEffect(getBeers, []);
 
   const handleInput = (event) => {
@@ -41,7 +42,6 @@ function App() {
   const handleFilterBeers = (filter) => {
     switch(filter){
       case "High ABV":
-        console.log(filter)
         holderBeers = beers.filter((beer) => {
           return beer.abv > 6;
         });
@@ -83,6 +83,10 @@ function App() {
                 </section>
             </main>
             }>
+          </Route>
+
+          <Route>
+            
           </Route>
         </Routes>
       </div>
