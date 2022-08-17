@@ -4,15 +4,15 @@ import BeerCard from "../../componets/BeerCard/BeerCard";
 import "./SideNavBar.scss"
 
 const SideNavBar = (props) => {
-    const {handleInput, searchTerm} = props;
+    const {handleInput, searchTerm, handleFilterBeers} = props;
 
     return(
         <>
             <SearchBox label={"Search By Name!"} searchTerm={searchTerm} handleInput={handleInput}/>
-            <Button title="All Beers" link=""/>
-            <Button title="High ABV" link="highABV"/>
-            <Button title="Classic Range" link="classicRange"/>
-            <Button title="Acidic" link="acidic"/>
+            <Button title="All Beers" handleFilterBeers={handleFilterBeers}/>
+            <Button title="High ABV" handleFilterBeers={handleFilterBeers}/>
+            <Button title="Classic Range" handleFilterBeers={handleFilterBeers}/>
+            <Button title="Acidic" handleFilterBeers={handleFilterBeers}/>
         </>
     )
 }

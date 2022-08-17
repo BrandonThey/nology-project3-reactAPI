@@ -1,13 +1,13 @@
 import "./Button.scss";
-
-//import {Link} from "react-router-dom";
-
 const Button = (props) => {
-    const {title, link} = props;
+    const {title, handleFilterBeers} = props;
 
     return(
-        <p>{title}</p>
-        // <Link to={`/${link}`}>{title}</Link>
+        <p onClick={()=> {
+            handleFilterBeers(title);
+        }}>
+        {title}
+        </p>
     )
 }
 
