@@ -3,26 +3,33 @@ import "./BeerInfo.scss"
 const BeerInfo = (props) => {
     const { beer, showInfo, toggleInfo } = props;
 
+    const lastSentenceIndex = beer.description?.indexOf(".", 150) + 1;
+
+    let shortenedText = beer.description;
+    if(lastSentenceIndex > 150){
+        shortenedText = beer.description?.substring(0, lastSentenceIndex);
+    }
+
     return(
         <>
-            <h2>{beer.name}</h2>
-                {!showInfo && <img src={beer.image_url} alt={beer.name} />}
-                <p>{beer.tagline}</p>
+            {!showInfo && <h2>{beer.name}</h2>}
+            {!showInfo && <img src={beer.image_url} alt={beer.name} />}
+            {!showInfo && <p>{beer.tagline}</p>}
 
-                {showInfo && 
-                <div>
-                    <h3>Description:</h3>
-                    <p>{beer.description}</p>
-                </div>}
+            {showInfo && 
+            <div className="description">
+                <h3>Description:</h3>
+                <p>{shortenedText}</p>
+            </div>}
 
-                {showInfo &&
-                <div>
-                    <h3>Great Food Pairings!</h3>
-                    <p>{beer.food_pairing}</p>
-                </div>}
+            {showInfo &&
+            <div className="food-pairings">
+                <h3>Great Food Pairings:</h3>
+                <p>{beer.food_pairing}</p>
+            </div>}
 
-                {!showInfo && <button onClick={toggleInfo}>Learn More!</button>}
-                {showInfo && <button onClick={toggleInfo}>Return</button>}
+            {!showInfo && <button onClick={toggleInfo}>Learn More!</button>}
+            {showInfo && <button onClick={toggleInfo}>Return</button>}
         </>
     )
 }

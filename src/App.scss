@@ -12,19 +12,21 @@ header {
         font-size: 18px;
         text-align: center;
     }
+    border-bottom: 2px solid black;
 }
 main{ 
     display: flex;
+    justify-content: space-evenly;
 }
 
 .side-nav {
     text-align: center;
-    margin-top: 10px;
     width: 40%;
     background-color: rgba(48,213,200,0.3);
 }
 
 .beer-cards {
+    margin: 4px;
     width: 70%;
     display: flex;
     flex-wrap: wrap;
