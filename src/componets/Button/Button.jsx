@@ -3,7 +3,7 @@ const Button = (props) => {
     const {title, handleFilterBeers} = props;
 
     return(
-        <p onClick={()=> {
+        <p className="side-nav__p" onClick={()=> {
             handleFilterBeers(title);
         }}>
         {title}

@@ -7,7 +7,7 @@ const SideNavBar = (props) => {
 
     return(
         <>
-            <SearchBox label={"Search By Name!"} searchTerm={searchTerm} handleInput={handleInput}/>
+            <SearchBox label={"Search"} searchTerm={searchTerm} handleInput={handleInput}/>
             <Button title="All Beers" handleFilterBeers={handleFilterBeers}/>
             <Button title="High ABV" handleFilterBeers={handleFilterBeers}/>
             <Button title="Classic Range" handleFilterBeers={handleFilterBeers}/>

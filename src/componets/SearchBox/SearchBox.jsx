@@ -5,8 +5,8 @@ const SearchBox = (props) => {
 
     return (
       <form className="search-box">
-        <label htmlFor={label} className="search-box__label">{label}</label>
         <input
+          placeholder={label}
           type="text"
           name={label}
           value={searchTerm}
