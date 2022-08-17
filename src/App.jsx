@@ -1,6 +1,7 @@
 import './App.scss';
 import SideNavBar from './containers/SideNavBar/SideNavBar';
 import BeerCard from './componets/BeerCard/BeerCard';
+import brewdogLogo from "./assets/images/Brewdog_logo_modified.png";
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
@@ -23,7 +24,6 @@ function App() {
       });
   }
 
-  console.log(beers);
   useEffect(getBeers, []);
 
   const handleInput = (event) => {
@@ -70,7 +70,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header>Header</header>
+        <header>
+          <img src={brewdogLogo} alt="Brewdog Brewing Company"/>
+          <h1>Great beer that's great for the planet.</h1>
+        </header>
         <Routes>
           <Route path="/" element={
             <main>

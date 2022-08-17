@@ -1,6 +1,18 @@
 *{
     background-color: whitesmoke;
 }
+
+header {
+    display: flex;
+    img {
+        width: 20%;
+        height: 100%;
+    }
+    h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+}
 main{ 
     display: flex;
 }
