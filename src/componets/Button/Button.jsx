@@ -6,7 +6,7 @@ const Button = (props) => {
     const {title, link} = props;
 
     return(
-        <p>Hello</p>
+        <p>{title}</p>
         // <Link to={`/${link}`}>{title}</Link>
     )
 }

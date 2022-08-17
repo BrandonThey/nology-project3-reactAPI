@@ -2,6 +2,7 @@ import './App.scss';
 import SideNavBar from './containers/SideNavBar/SideNavBar';
 import BeerCard from './componets/BeerCard/BeerCard';
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
 function App() {
@@ -35,18 +36,25 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header>Header</header>
-      <main>
-        <section className='side-nav'>
-          {beers && <SideNavBar searchTerm={searchTerm} handleInput={handleInput}/>}
-        </section>
+    <Router>
+      <div className="App">
+        <header>Header</header>
+        <Routes>
+          <Route path="/" element={
+            <main>
+                  <section className='side-nav'>
+                    {beers && <SideNavBar searchTerm={searchTerm} handleInput={handleInput}/>}
+                  </section>
 
-        <section className='beer-cards'>
-          {beers && <BeerCard beersArr={filteredBeers}/>}
-        </section>
-      </main>
-    </div>
+                <section className='beer-cards'>
+                  {beers && <BeerCard beersArr={filteredBeers}/>}
+                </section>
+            </main>
+            }>
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
