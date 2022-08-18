@@ -31,3 +31,67 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
+
+@media screen and (min-width: 400px){
+    header {
+        display: flex;
+        align-items: center;
+        img {
+            width: 20%;
+            height: 100%;
+        }
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    header {
+        display: flex;
+        align-items: center;
+        img {
+            width: 20%;
+            height: 100%;
+        }
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .side-nav {
+        width: 20%;
+    }
+
+    .beer-cards {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    header {
+        display: flex;
+        align-items: center;
+        img {
+            width: 20%;
+            height: 100%;
+        }
+        h1 {
+            font-size: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    header {
+        display: flex;
+        align-items: center;
+        img {
+            width: 20%;
+            height: 100%;
+        }
+        h1 {
+            font-size: 70px;
+        }
+    }
+}
