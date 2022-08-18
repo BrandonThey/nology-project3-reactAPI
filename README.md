@@ -1,3 +1,16 @@
+This is a React website as a beginner project.
+
+Description: I created a basic website that displays beer information that has been fetched from Punk API. This project was to practice and implement new skills in React, which was done through the use of React components and containers, useStates, and fetching from APIs.
+
+How to install and run the project:
+
+Fork the repository
+Clone the forked repository
+Run the project using NPM, using npm start
+Explore around
+Alternatively, this project will be hosted on github pages
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
