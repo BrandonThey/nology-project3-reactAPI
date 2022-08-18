@@ -8,7 +8,6 @@ Fork the repository
 Clone the forked repository
 Run the project using NPM, using npm start
 Explore around
-Alternatively, this project will be hosted on github pages
 
 
 # Getting Started with Create React App
