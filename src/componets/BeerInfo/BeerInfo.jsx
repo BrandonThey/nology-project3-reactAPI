@@ -1,7 +1,14 @@
 import "./BeerInfo.scss"
+import { useState } from "react";
 
 const BeerInfo = (props) => {
-    const { beer, showInfo, toggleInfo } = props;
+    const { beer} = props;
+
+    const [showInfo, setShowInfo] = useState(false);
+
+    const toggleInfo = () => {
+        setShowInfo(!showInfo);
+    }
 
     const lastSentenceIndex = beer.description?.indexOf(".", 150) + 1;
 

@@ -3,25 +3,30 @@
 $main-font: "Oswald";
 $main-background-color: whitesmoke;
 $primary-color: rgba(48,213,200,0.3);
+$header-color: #D3D3D3;
 *{
     font-family: $main-font;
     background-color: $main-background-color;
 }
 
 header {
+    background-color:$header-color;
     font-family: $main-font;
     display: flex;
     img {
+        background-color:$header-color;
         width: 20%;
         height: 100%;
     }
     h1 {
+        background-color:$header-color;
         font-size: 18px;
         text-align: center;
     }
     border-bottom: 2px solid black;
 }
 main{ 
+    background-color:$header-color;
     display: flex;
     justify-content: space-evenly;
 }
@@ -33,6 +38,7 @@ main{
 }
 
 .beer-cards {
+    background-color:$header-color;
     margin: 4px;
     width: 70%;
     display: flex;
