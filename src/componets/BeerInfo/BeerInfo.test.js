@@ -3,9 +3,8 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import beers from "../../data/beers";
 
-render(<BeerInfo beer={beers[0]}/>);
 it("Should render the beer information", () => {
-
+    render(<BeerInfo beer={beers[0]}/>);
     const beerInfoH2 = screen.getByRole("heading");
     const beerInfoImg = screen.getByRole("img");
     const beerInfoButton = screen.getByRole("button");
