@@ -3,7 +3,7 @@ import SearchBox from "../../componets/SearchBox/SearchBox";
 import "./SideNavBar.scss"
 
 const SideNavBar = (props) => {
-    const {handleInput, searchTerm, handleFilterBeers} = props;
+    const {handleInput, searchTerm, handleFilterBeers, filterBeers} = props;
 
     return(
         <div className="sticky">

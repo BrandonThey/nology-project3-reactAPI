@@ -1,7 +1,7 @@
 import "./SearchBox.scss";
 
 const SearchBox = (props) => {
-    const { label, searchTerm, handleInput } = props;
+    const { label, searchTerm, handleInput, filterBeers } = props;
 
     return (
       <form className="search-box">
@@ -10,7 +10,11 @@ const SearchBox = (props) => {
           type="text"
           name={label}
           value={searchTerm}
-          onInput={handleInput}
+          onChange={(event) => 
+            {
+              handleInput(event)
+            }
+          }
           className="search-box__input"
         />
       </form>
