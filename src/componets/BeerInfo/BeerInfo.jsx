@@ -2,7 +2,7 @@ import "./BeerInfo.scss"
 import { useState } from "react";
 
 const BeerInfo = (props) => {
-    const { beer} = props;
+    const {beer} = props;
 
     const [showInfo, setShowInfo] = useState(false);
 
