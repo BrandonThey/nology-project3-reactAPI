@@ -3,12 +3,12 @@ import SideNavBar from './containers/SideNavBar/SideNavBar';
 import BeerCard from './componets/BeerCard/BeerCard';
 import brewdogLogo from "./assets/images/Brewdog_logo_modified.png";
 import { useState, useEffect } from 'react';
-let counter = 0;
 function App() {
 
   const [beers, setBeers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBeers, setFilteredBeers] = useState();
+  const [myBeers, setMyBeers] = useState([]);
   let holderBeers;
 
   const getBeers = () => {
@@ -22,6 +22,17 @@ function App() {
       });
   }
 
+  const getMyBeers = (holderBeers) => {
+    fetch("http://localhost:3030/api/beers")
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setMyBeers(data);
+      });
+  }
+
+  useEffect(getMyBeers, [])
   useEffect(getBeers, []);
 
   const handleInput = (event) => {
@@ -68,6 +79,9 @@ function App() {
           return beer.ph < 4;
         });
         break;
+      case "My Beers":
+        holderBeers = myBeers;
+        break;
       default:
         holderBeers = beers;
         break;
@@ -75,6 +89,36 @@ function App() {
     setFilteredBeers(holderBeers);
   }
   
+  const handleSubmition = (event) => {
+    event.preventDefault();
+    let beerName = event.target[0].value;
+    let tagline = event.target[1].value;
+    let beerObject = {
+        "id": myBeers.length + 2,
+        "name": beerName,
+        "tagline": tagline,
+        "first_brewed": "08/2020",
+        "description": "Evil syrup and a touch of crushed gooseberry",
+        "image_url": "https://images.punkapi.com/v2/keg.png",
+        "abv": 4.2,
+        "ph": 5.7,
+        "food_pairing": [
+            "Meatballs",
+            "Green Beans",
+            "Regular Beans"
+        ]
+    }
+    const reqestOptions = {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({beer: beerObject})
+    };
+
+    fetch("http://localhost:3030/api/submittion", reqestOptions)
+    .then(response=>response.json())
+    .then(data => console.log(data))
+}
+
   return (
     <div className="App">
       <header>
@@ -84,7 +128,7 @@ function App() {
       
       <main>
           <section className='side-nav'>
-            {beers && filteredBeers && <SideNavBar searchTerm={searchTerm} handleInput={handleInput} handleFilterBeers={handleFilterBeers}/>}
+            {beers && filteredBeers && <SideNavBar searchTerm={searchTerm} handleInput={handleInput} handleFilterBeers={handleFilterBeers} handleSubmition={handleSubmition}/>}
           </section>
 
           <section className='beer-cards'>
