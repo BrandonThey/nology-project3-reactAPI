@@ -1,13 +1,17 @@
 This is a React website as a beginner project.
 
-Description: I created a basic website that displays beer information that has been fetched from Punk API. This project was to practice and implement new skills in React, which was done through the use of React components and containers, useStates, and fetching from APIs.
+Description: I created a basic website that displays beer information that has been fetched from Punk API and from an API that I have created to store my own fabricated beers. It is meant to be used in tandem with the nology-project3-reactAPI-myAPI repository: https://github.com/BrandonThey/nology-project3-reactAPI-myAPI.git.
+This project was to practice and implement new skills in React, which was done through the use of React components and containers, useStates, and fetching from APIs.
 
 How to install and run the project:
 
-Fork the repository
-Clone the forked repository
-Run the project using NPM, using npm start
-Explore around
+1. Fork both this repository and the myAPI repository found here: https://github.com/BrandonThey/nology-project3-reactAPI-myAPI.git.
+2. Clone both forked repositories
+3. Open up the myAPI repository and install all dependencies using npm install.
+4. Start the myAPI project using npm run watch, this will start up an API that listens on port 3030 for any queries.
+5. Open up the reactAPI repository and install all dependencies using npm install.
+6.  Run the project using npm start
+7. Explore around
 
 
 # Getting Started with Create React App
