@@ -1,4 +1,6 @@
 import "./Button.scss";
+
+//simple button component that takes a button title(inside text), and function on click
 const Button = (props) => {
     const {title, handleFilterBeers} = props;
 

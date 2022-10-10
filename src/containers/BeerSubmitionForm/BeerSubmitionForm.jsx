@@ -1,7 +1,11 @@
 import "./BeerSubmitionForm.scss";
 
+//BeerSubmitionForm container that renders a form for users to submit the name and tagline of a new beer to the myAPI API.
 const BeerSubmitionForm = (props) => {
+    //gets the handle submition function from app.jsx that will post the beer information
     let {handleSubmition} = props;
+
+    //returns a form with input boxes and labels
     return(
         <>
             <h2>Submit a beer!</h2>

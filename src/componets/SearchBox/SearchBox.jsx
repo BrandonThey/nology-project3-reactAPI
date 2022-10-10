@@ -1,5 +1,6 @@
 import "./SearchBox.scss";
 
+//SearchBox component that renders a input box for user to enter search terms
 const SearchBox = (props) => {
     const { label, searchTerm, handleInput} = props;
 
